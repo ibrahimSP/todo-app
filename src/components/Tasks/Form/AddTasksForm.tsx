@@ -84,6 +84,7 @@ const AddTasksForm = ({ tasks, setTasks }: AddTasksFormProps) => {
             onKeyDown={onTaskNameFieldKeyDown}
             autoComplete="off"
             type="text"
+            autoFocus
           />
           <div className="field-actions">
             <IconButton
