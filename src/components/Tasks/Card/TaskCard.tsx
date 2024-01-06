@@ -30,6 +30,13 @@ const TaskCard = ({ taskDetails, setTasks }: TaskCardProps) => {
     taskDetails.completed = event.target.checked;
 
     // Uptade task.
+    setTasks((tasks) => {
+      const updatedTaskIndex = tasks.findIndex(
+        (task) => taskDetails.id === task.id
+      );
+      tasks[updatedTaskIndex].completed = event.target.checked;
+      return [...tasks];
+    });
   };
 
   const onTaskClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -40,6 +47,9 @@ const TaskCard = ({ taskDetails, setTasks }: TaskCardProps) => {
     event.stopPropagation();
 
     // Delete task.
+    setTasks((tasks) => {
+      return tasks.filter((task) => task.id !== taskDetails.id);
+    });
   };
 
   return (
