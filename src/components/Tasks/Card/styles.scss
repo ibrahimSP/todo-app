@@ -1,0 +1,86 @@
+.task-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 56px;
+  width: 100%;
+
+  .MuiCardActionArea-root {
+    display: flex;
+    justify-content: space-between;
+
+    .MuiCardContent-root {
+      height: 100%;
+      width: 100%;
+      max-width: calc(100% - 56px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px;
+      box-sizing: border-box;
+
+      .task-form-control {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        .MuiButtonBase-root {
+          height: 40px;
+          width: 40px;
+          padding: 4px 8px;
+          margin-right: 4px;
+          margin-bottom: auto;
+        }
+      }
+
+      .MuiFormControlLabel-root {
+        flex: 1;
+      }
+
+      .task-info {
+        display: flex;
+        align-self: flex-start;
+        gap: 12px;
+
+        svg {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  .MuiCardMedia-root {
+    height: 100%;
+
+    .delete-task {
+      width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.3;
+      transition: width 0.125s ease-in-out;
+      border-radius: 2px 0px 2px 2px;
+
+      svg {
+        width: 0;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:hover {
+    .delete-task {
+      width: 56px;
+      height: 100%;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
