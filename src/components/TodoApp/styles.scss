@@ -1,0 +1,17 @@
+#todos-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: rgb(183, 216, 227);
+  width: 100%;
+  height: 70vh;
+  max-width: 680px;
+  border-radius: 12px;
+  padding: 24px;
+  box-sizing: border-box;
+
+  .actions {
+    display: flex;
+    justify-content: center;
+  }
+}
