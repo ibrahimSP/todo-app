@@ -1,0 +1,44 @@
+.tasks-viewer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+
+  .MuiTabs-root {
+    min-height: 52px;
+
+    .MuiTabs-flexContainer {
+      display: flex;
+      margin: auto;
+      border-radius: 8px;
+      background: rgba(118, 118, 128, 0.22);
+      width: fit-content;
+
+      .MuiButtonBase-root {
+        border-radius: 8px 8px 0 0;
+        width: 96px;
+        height: 36px;
+        min-height: 36px;
+        min-width: 140px;
+        margin: 8px;
+
+        &.Mui-selected {
+          background: rgba(255, 255, 255, 0.8);
+
+          .MuiTypography-root {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: auto;
+    padding: 4px;
+    box-sizing: border-box;
+  }
+}
