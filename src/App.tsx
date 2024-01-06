@@ -1,9 +1,15 @@
-import "./App.css";
-import Todo from "./components/Todo/Todo";
+import "./App.scss";
+import Todo from "./components/TodoApp/Todo";
+import Logo from "./assets/icons/todo.svg";
+import { Typography } from "@mui/material";
 
-function App() {
+export function App() {
   return (
     <div className="app">
+      <div className="header">
+        <img src={Logo} alt="Todo logo" />
+        <Typography variant="h3">The Tasks</Typography>
+      </div>
       <Todo />
     </div>
   );
